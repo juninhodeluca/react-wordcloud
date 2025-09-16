@@ -61,7 +61,8 @@
   "scripts": {
     "build": "microbundle --globals tippy.js=tippy --jsx React.createElement",
     "clean": "rm -rf dist",
-    "prepare": "npm run clean; npm run build"
+    "prepare": "npm run clean; npm run build",
+    "lint": "echo \"no lint configured\""
   },
   "source": "index.js",
   "typings": "types/index.d.ts",
