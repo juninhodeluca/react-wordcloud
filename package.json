@@ -30,7 +30,6 @@
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@types/seedrandom": "^3.0.8",
-    "husky": "^9.1.7",
     "microbundle": "^0.15.1",
     "typescript": "^5.9.2"
   },
@@ -39,11 +38,6 @@
     "types/index.d.ts"
   ],
   "homepage": "https://react-wordcloud.netlify.com/",
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run prepare && npm run lint"
-    }
-  },
   "keywords": [
     "react",
     "wordcloud",
@@ -61,8 +55,7 @@
   "scripts": {
     "build": "microbundle --globals tippy.js=tippy --jsx React.createElement",
     "clean": "rm -rf dist",
-    "prepare": "npm run clean; npm run build",
-    "lint": "echo \"no lint configured\""
+    "prepare": "npm run clean; npm run build"
   },
   "source": "index.js",
   "typings": "types/index.d.ts",
