@@ -1,9 +1,7 @@
-import 'd3-transition';
-
 import { descending } from 'd3-array';
 import d3Cloud from 'd3-cloud';
-import { event } from 'd3-selection';
-import clonedeep from 'lodash.clonedeep';
+import 'd3-transition';
+import _ from 'lodash';
 import seedrandom from 'seedrandom';
 import tippy from 'tippy.js';
 
@@ -46,12 +44,12 @@ export function render({ callbacks, options, random, selection, words }) {
     enter => {
       let text = enter
         .append('text')
-        .on('click', word => {
+        .on('click', (event, word) => {
           if (onWordClick) {
             onWordClick(word, event);
           }
         })
-        .on('mouseover', word => {
+        .on('mouseover', (event, word) => {
           if (
             enableTooltip &&
             (!tooltipInstance || tooltipInstance.isDestroyed)
@@ -60,7 +58,7 @@ export function render({ callbacks, options, random, selection, words }) {
               animation: 'scale',
               arrow: true,
               content: () => getWordTooltip(word),
-              onHidden: (instance) => {
+              onHidden: instance => {
                 instance.destroy();
                 tooltipInstance = null;
               },
@@ -72,7 +70,7 @@ export function render({ callbacks, options, random, selection, words }) {
             onWordMouseOver(word, event);
           }
         })
-        .on('mouseout', word => {
+        .on('mouseout', (event, word) => {
           if (tooltipInstance && !tooltipInstance.state.isVisible) {
             tooltipInstance.destroy();
           }
@@ -169,7 +167,8 @@ export function layout({
     .size(size)
     // @ts-ignore
     .padding(padding)
-    .words(clonedeep(sortedWords))
+    .words(_.cloneDeep(sortedWords))
+    // .words(clonedeep(sortedWords))
     .rotate(() => {
       if (rotations === undefined) {
         // Default rotation algorithm

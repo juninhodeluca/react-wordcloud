@@ -4,7 +4,17 @@
     "checkJs": true,
     "esModuleInterop": true,
     "jsx": "react",
+    "lib": [
+      "ES2020",
+      "DOM"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "node",
     "noEmit": true,
+    "target": "ESNext"
   },
-  "exclude": ["**/dist", "**/node_modules"]
+  "exclude": [
+    "**/dist",
+    "**/node_modules"
+  ]
 }

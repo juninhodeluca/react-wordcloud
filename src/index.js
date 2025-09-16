@@ -1,4 +1,4 @@
-import debounce from 'lodash.debounce';
+import _ from 'lodash';
 import React, { useEffect, useRef } from 'react';
 
 import { useResponsiveSvgSelection } from './hooks';
@@ -26,7 +26,7 @@ export const defaultOptions = {
   transitionDuration: 600,
 };
 
-function ReactWordCloud({
+export function ReactWordCloud({
   callbacks,
   maxWords = 100,
   minSize,
@@ -41,7 +41,7 @@ function ReactWordCloud({
     options.svgAttributes,
   );
 
-  const render = useRef(debounce(layout, 100));
+  const render = useRef(_.debounce(layout, 100));
 
   useEffect(() => {
     if (selection) {
@@ -69,4 +69,4 @@ ReactWordCloud.defaultProps = {
   options: defaultOptions,
 };
 
-export default ReactWordCloud;
+// export default ReactWordCloud;

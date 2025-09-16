@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 
 export function useResponsiveSvgSelection(minSize, initialSize, svgAttributes) {
-  const elementRef = useRef();
+  const elementRef = useRef(null);
   const [size, setSize] = useState(initialSize);
   const [selection, setSelection] = useState(null);
 
