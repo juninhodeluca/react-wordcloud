@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.0](https://github.com/juninhodeluca/wordcloud-react-18) (2025-09-16)
+- Updated dependencies `v1.2.5`.
+- React 18 is now peer dependencie `.node-version`.
+
 ## [1.2.7](https://github.com/chrisrzhou/react-wordcloud/compare/v1.2.7...v1.2.6) (2020-08-07)
 - Internal code cleanup (detypscriptify source code)
 - Update docs, readme and other configs.
