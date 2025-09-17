@@ -1,16 +1,15 @@
-# ☁️ react-wordcloud
+# wordcloud-react-18
 
 Simple React + D3 wordcloud component with powerful features. Uses the [`d3-cloud`](https://github.com/jasondavies/d3-cloud) layout.
+This is a fork from [`☁️ react-wordcloud`](https://github.com/chrisrzhou/react-wordcloud), with updated dependencies and React 18.
 
 ![image](/public/wordcloud.png)
 
 ## Install
 
 ```sh
-npm install react-wordcloud
+npm install wordcloud-react-18
 ```
-
-Note that `react-wordcloud` requires `react^16.13.0` as a peer dependency.
 
 ## Use
 
@@ -18,7 +17,7 @@ Note that `react-wordcloud` requires `react^16.13.0` as a peer dependency.
 
 ```js
 import React from 'react';
-import ReactWordcloud from 'react-wordcloud';
+import { ReactWordCloud } from 'wordcloud-react-18';
 
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/animations/scale.css';
@@ -43,11 +42,11 @@ const words = [
 ]
 
 function SimpleWordcloud() {
-  return <ReactWordcloud words={words} />
+  return <ReactWordCloud words={words} />
 }
 ```
 
-By default, `ReactWordcloud` is configured with animated tooltips enabled and requires CSS for styling. Tippy provides base styling in the resources above or you can create your own.
+By default, `ReactWordCloud` is configured with animated tooltips enabled and requires CSS for styling. Tippy provides base styling in the resources above or you can create your own.
 
 ### Kitchen Sink
 
@@ -69,7 +68,7 @@ const words = [...];
 
 function MyWordcloud() {
   return (
-    <ReactWordcloud
+    <ReactWordcCloud
       callbacks={callbacks}
       options={options}
       size={size}
@@ -79,48 +78,3 @@ function MyWordcloud() {
 }
 ```
 
-## Examples
-
-View all documented examples and gallery of `react-wordcloud` applications at https://react-wordcloud.netlify.com/.
-
-You can also run the examples locally:
-
-```sh
-git clone git@github.com:chrisrzhou/react-wordcloud
-
-cd react-wordcloud
-npm install && npm run docs
-```
-
-### No props
-
-[![Edit react-wordcloud-simple](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/bgov9)
-
-### Responsive
-
-[![Edit react-wordcloud-simple](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/55sb8)
-
-### Configurable Options
-
-[![Edit react-wordcloud-interactive](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/fnk8w)
-
-### Callbacks
-
-[![Edit react-wordcloud-interactive](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/4lecp)
-
-## Wordcloud Generator
-
-Create wordclouds using this wordcloud generator: https://wordcloud-generator.netlify.com/
-
-Features supported:
-
-- Edit and Upload text inputs
-- Various NLP features (stopwords, ngrams)
-- Wordcloud configurations
-- Export/save/share wordclouds
-
-## Contributing
-
-The code is written in `typescript`, linted with `xo`, and built with `microbundle`. Examples and documentations are built with `docz`.
-
-Feel free to contribute by submitting a pull request.
