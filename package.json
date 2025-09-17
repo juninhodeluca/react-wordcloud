@@ -3,7 +3,7 @@
     "Chris Zhou <chrisrzhou@pm.me> (https://chrisrzhou.io)",
     "Juninho De Luca <juninhodeluca@gmail.com>"
   ],
-  "bugs": "https://github.com/juninhodeluca/react-wordcloud/issues",
+  "bugs": "https://github.com/juninhodeluca/wordcloud-react-18/issues",
   "dependencies": {
     "d3-array": "^3.2.4",
     "d3-cloud": "^1.2.7",
@@ -51,7 +51,7 @@
   "peerDependencies": {
     "react": "^18.3.1"
   },
-  "repository": "https://github.com/juninhodeluca/react-wordcloud",
+  "repository": "https://github.com/juninhodeluca/wordcloud-react-18",
   "scripts": {
     "build": "microbundle --globals tippy.js=tippy --jsx React.createElement",
     "clean": "rm -rf dist",
